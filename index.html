@@ -41,6 +41,29 @@ font-weight:800;
 .logo span{
 color:#f39c12;
 }
+.btn{
+    background: linear-gradient(135deg,#ff4b2b,#ff416c);
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(255,65,108,0.4);
+    background: linear-gradient(135deg,#ff416c,#ff4b2b);
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
 
 nav ul{
 display:flex;
@@ -304,6 +327,7 @@ margin:6px;
 
 }
 
+
 </style>
 
 </head>
@@ -320,6 +344,7 @@ margin:6px;
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#experience">Experience</a></li>
+<li><a href="image/resume.pdf"  download class="btn">RESUME</a></li>
 
 </ul>
 
@@ -348,7 +373,7 @@ View My Work →
 
 <div class="hero-image">
 
-<img src="image/boy.png" alt="developer">
+<img src="image/boy.PNG" alt="developer">
 
 </div>
 
@@ -691,4 +716,3 @@ behavior:"smooth"
 
 </body>
 </html>
-
