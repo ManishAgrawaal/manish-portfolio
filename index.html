@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manish Kumar | Senior Software Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+.footer{
+
+background:#f4f4f4;
+padding:60px 10%;
+font-family:Arial;
+
+}
+
+.footer-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+
+}
+
+.footer-col h3{
+
+margin-bottom:15px;
+font-size:16px;
+font-weight:700;
+
+}
+
+.footer-col p{
+
+margin:8px 0;
+color:#555;
+
+}
+
+.footer-col ul{
+
+list-style:none;
+padding:0;
+
+}
+
+.footer-col ul li{
+
+margin:10px 0;
+
+}
+
+.footer-col ul li a{
+
+text-decoration:none;
+color:#3b5ccc;
+transition:0.3s;
+
+}
+
+.footer-col ul li a:hover{
+
+color:#000;
+
+}
+
+/* logo */
+
+.logo{
+
+font-weight:800;
+}
+
+.logo span{
+
+color:#f39c12;
+
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+.footer-container{
+
+grid-template-columns:1fr;
+text-align:center;
+
+}
+
+}
+
+.skill-card,
+.exp-card{
+
+background:rgba(255,255,255,0.08);   /* transparent */
+border:1px solid rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);           /* glass effect */
+border-radius:10px;
+padding:20px;
+
+}
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+backdrop-filter:blur(10px);
+
+/* background: rgba(145, 128, 219, 0.12);  */
+background:#f4f4f4;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav h1{
+color:#38bdf8;
+font-weight:600;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:rgb(236, 10, 10);
+font-size:15px;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-image
+{
+  padding-left: 180px;
+}
+
+.hero h2{
+font-size:44px;
+margin-bottom:10px;
+}
+
+.hero span{
+color:#38bdf8;
+}
+
+.hero p{
+margin-top:10px;
+font-size:18px;
+max-width:650px;
+opacity:.9;
+}
+
+.btn{
+margin-top:25px;
+padding:12px 28px;
+background:#38bdf8;
+border:none;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(56,189,248,0.4);
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:40px;
+color:#38bdf8;
+}
+
+/* GLASS CARD */
+
+.skill-card,
+.project-card,
+.exp-card{
+
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:12px;
+backdrop-filter:blur(8px);
+backdrop-filter: blur(8px);            /* glass effect */
+-webkit-backdrop-filter: blur(8px);
+box-shadow:0 8px 20px rgba(0,0,0,0.25);  /* card depth */
+padding: 20px;
+transition: 0.3s;
+}
+.skill-card{
+
+background: rgba(255,200,200,0.08);   /* transparent background */
+border: 2px solid rgba(255,255,255,0.2);
+backdrop-filter: blur(8px);            /* glass effect */
+-webkit-backdrop-filter: blur(8px);
+border-radius: 12px;
+padding: 20px;
+transition: 0.3s;
+box-shadow:0 6px 15px rgba(0,0,0,0.25);  /* card depth */
+backdrop-filter: blur(8px);   /* glass effect */
+}
+
+/* hover effect */
+
+.skill-card:hover{
+transform: translateY(-5px);
+border-color:#38bdf8;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* heading */
+
+.skill-card h3{
+margin-bottom:10px;
+color:#38bdf8;
+}
+
+/* list */
+
+.skill-card ul{
+padding-left:18px;
+}
+
+.skill-card li{
+margin-bottom:6px;
+}
+
+.skill-card:hover,
+.project-card:hover{
+transform:translateY(-6px);
+border-color:#38bdf8;
+}
+
+/* SKILLS */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.skill-card h3{
+margin-bottom:12px;
+color:#38bdf8;
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.project-card img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+/* EXPERIENCE */
+
+#experience div{
+margin-bottom:30px;
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+#experience h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:25px;
+margin-top:40px;
+background:rgba(2,6,23,0.6);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:10px;
+}
+
+.hero h2{
+font-size:30px;
+}
+
+}
+.hero{
+background:white;
+padding:80px 10%;
+}
+
+.hero-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+}
+
+.hero-text h1{
+font-size:32px;
+color:#333;
+margin-bottom:10px;
+}
+
+.hero-text h2{
+font-size:36px;
+color:#3b5bdb;
+margin-bottom:15px;
+}
+
+.hero-text p{
+font-size:18px;
+color:#555;
+margin-bottom:25px;
+}
+
+.hero-btn{
+background:#3b5bdb;
+color:white;
+padding:14px 28px;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+.hero-btn:hover{
+background:#2f4cc9;
+}
+
+.hero-image img{
+width:400px;
+border-radius:50% 50% 0 0;
+object-fit:cover;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<h2 class="logo">MANISH <span>PORTFOLIO</span></h2>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
+
+</ul>
+
+</nav>
+
+
+<!-- <section class="hero" id="home">
+
+<h2>Hello, I'm <span>Manish Kumar</span></h2>
+
+<p>
+Senior Software Engineer with expertise in .NET Full Stack development, building scalable web applications using C#, ASP.NET Core, Angular, REST APIs, and SQL Server.
+</p>
+
+<button class="btn" onclick="scrollToSection()">View My Work</button>
+
+</section> -->
+<section class="hero" id="home">
+
+<div class="hero-container">
+
+<div class="hero-text">
+<h1>Hi, I'm <span>Manish Kumar</span></h1>
+
+<h2>.NET Full Stack Developer</h2>
+
+<p>
+I build scalable web applications using C#, ASP.NET Core, Angular,
+REST APIs, and SQL Server.
+</p>
+
+<button class="hero-btn">
+View My Work →
+</button>
+</div>
+
+<div class="hero-image">
+<img src="D:\portfolio\image\boy.PNG">
+</div>
+
+</div>
+
+</section>
+
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<p>
+I am a Senior Software Engineer with 5+ years of experience in designing and developing scalable web applications using C#, .NET Core, ASP.NET, and RESTful APIs. 
+I have strong experience in full-stack development using Angular/React, HTML, CSS, and JavaScript to build responsive and user-friendly applications. 
+My expertise includes object-oriented programming, microservices architecture, and secure API development for enterprise systems. 
+</p>
+
+<br>
+
+<p>
+I am experienced in database design and performance optimization using SQL Server, PostgreSQL, Entity Framework, and LINQ. 
+I have worked on banking, HRMS, airline reservation, and retail platforms, delivering secure and scalable software solutions. 
+I enjoy solving complex problems and continuously improving my skills while working in Agile environments with modern DevOps and cloud practices. 
+</p>
+
+</section>
+
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<!-- SAME CONTENT KEPT -->
+
+<div class="skill-card">
+<h3>Programming Languages</h3>
+<ul>
+<li>C#</li>
+<li>JAVASCRIPT</li>
+<li>SQL</li>
+<li>TYPESCRIPT</li>
+</ul>
+</div>
+
+<div class="skill-card">
+<h3>Backend technologies and Frameworks</h3>
+<ul>
+<li>ASP.NET Core</li>
+<li>ASP.NET CORE MVC</li>
+<li>ASP.NET WEB API</li>
+<li>RESTFUL SERVICES</li>
+</ul>
+</div>
+
+<div class="skill-card">
+<h3>DATA ACCESS AND ORM</h3>
+<ul>
+<li>ENTITY FRAMEWORK CORE</li>
+<li>LINQ</li>
+<li>ADO.NET</li>
+</ul>
+</div>
+
+<div class="skill-card">
+<h3>SOFTWARE DESIGN & ARCHITECTURE</h3>
+<ul>
+<li>OOPS</li>
+<li>SOLID PRINCIPLES</li>
+<li>MVC</li>
+<li>MICROSERVICES</li>
+<li>API GATEWAY & EVENT-DRIVEN</li>
+</ul>
+</div>
+
+<div class="skill-card">
+<h3>DATA STRUCTURE AND CORE CONCEPTS</h3>
+<ul>
+<li>DSA</li>
+<li>GENERICS AND COLLECTIONS</li>
+<li>MULTI THREADING</li>
+<li>ASYNCHRONOUS PROGRAMMING</li>
+</ul>
+</div>
+
+<div class="skill-card">
+<h3>DATABASE TECHNOLOGIES</h3>
+<ul>
+<li>SQL SERVER</li>
+<li>MYSQL</li>
+<li>DATABASE DESIGN</li>
+<li>STORED PROCEDURE</li>
+</ul>
+</div>
+
+<div class="skill-card">
+<h3>MESSAGING & STREAMING</h3>
+<ul>
+<li>KAFKA</li>
+</ul>
+</div>
+
+<div class="skill-card">
+<h3>SECURITY</h3>
+<ul>
+<li>OAuth (AUTHENTICATION & AUTHORIZATION)</li>
+</ul>
+</div>
+
+<div class="skill-card">
+<h3>TOOLS & DEVELOPMENT ENVIRONMENT</h3>
+<ul>
+<li>VISUAL STUDIO</li>
+<li>VS CODE</li>
+<li>GIT</li>
+<li>GITHUB</li>
+<li>Postman</li>
+<li>SWAGGER</li>
+<li>SSMS</li>
+</ul>
+</div>
+
+<div class="skill-card">
+<h3>DEVOPS & CLOUD</h3>
+<ul>
+<li>DOCKER BASIC</li>
+<li>JFROG & MICROSOFT BASICS</li>
+<li>IIS & CI/CD PIPELINES BASICS</li>
+</ul>
+</div>
+
+<div class="skill-card">
+<h3>DEVELOPMENT PRACTICES</h3>
+<ul>
+<li>UNIT TESTING</li>
+<li>DEBUGGING & CODE REVIEW</li>
+<li>AGILE/ SCRUM & SDLC</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<h3>Online Banking</h3>
+
+<p>Developed secure banking modules for fund transfer and transactions using ASP.NET Core, REST APIs, OAuth/JWT authentication, payment gateway integration, and optimized SQL queries with LINQ.</p>
+
+<p>Implemented OAuth/JWT authentication and integrated payment gateway services while optimizing SQL queries using LINQ.</p>
+
+<p>Supported CI/CD deployments, code reviews, and production issue resolution in an Agile environment.</p>
+
+</div>
+
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f">
+
+<h3>HRMS & Payroll (MyPay Application)</h3>
+
+<p>Developed HRMS and payroll modules using ASP.NET Core and SQL Server, built REST APIs with CRUD operations, and supported SOX documentation, production deployments, and debugging.</p>
+
+<p>Built REST APIs using GET, POST, PUT, DELETE methods and implemented business logic and database queries.</p>
+
+<p>Supported SOX documentation, production deployments, debugging, and Agile development processes. Supported SOX documentation, production deployments, debugging, and Agile development processes.</p>
+
+</div>
+
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05" alt="Airline Reservation System">
+
+<h3>Airline Ticketing & Reservation System</h3>
+
+<p>Developed airline reservation features including ﬂight search, booking, cancellation, and passenger management.</p>
+
+<p>Built backend services using ASP.NET Core and responsive UI using Angular.</p>
+
+<p>Implemented CRUD operations, validations, and RESTful APIs following MVC architecture.</p>
+
+</div>
+
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a">
+
+<h3>Retail eCommerce Operations Portal</h3>
+
+<p>Developed eCommerce modules including product catalog, order management, and customer services.</p>
+
+<p>Optimized database performance and supported application deployments and system stability.</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="experience">
+
+<h2 class="section-title">Experience</h2>
+
+<div>
+
+<h3>Senior Software Engineer,Mphasis</h3>
+
+<ul>
+<li>Developed secure banking modules for fund transfer and transactions using ASP.NET Core and RESTful APIs.</li>
+<li>Implemented OAuth/JWT authentication and integrated payment gateway services while optimizing SQL queries using LINQ.</li>
+<li>Supported CI/CD deployments, code reviews, and production issue resolution in an Agile environment.</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>Programmer Analyst,Cognizant</h3>
+
+<ul>
+<li>Developed and enhanced HRMS &Payroll modules with ASP.NET/ASP.NET Coreand SQL Server backend</li>
+<li>Built REST APIs usingGET,POST,PUT,DELETEmethods andimplementedbusiness logic and database queries.</li>
+<li>Supported SOX documentation, production deployments, debugging, and Agile.</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>Software Developer, Cyient Limited</h3>
+
+<ul>
+<li>Developed airline reservation features including ﬂight search,booking,cancellation,and passenger management.</li>
+<li>Built backend services using ASP.NET Core and responsive UI using Angular.</li>
+<li>Implemented CRUD operations, validations, and RESTful APIs following MVC architecture.</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>DotNet Developer, Cyient Limited</h3>
+
+<ul>
+<li>Developed eCommerce modules including product catalog, order management, and customer services.</li>
+<li>Optimized database performance and supported application deployments and system stability.</li>
+<li>Implemented CRUD operations, validations, and RESTful APIs following MVC architecture.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- Column 1 -->
+
+<div class="footer-col">
+<h2 class="logo">MANISH <span>PORTFOLIO</span></h2>
+<p>Crafting reliable .NET full-stack applications for real-world business problems.</p>
+</div>
+
+
+
+
+<!-- Column 2 -->
+
+<div class="footer-col">
+
+<h3>GET IN TOUCH</h3>
+
+<p>✉ manishkumar.indup@gmail.com</p>
+
+</div>
+
+<!-- Column 3 -->
+
+<div class="footer-col">
+<h3>CONNECT WITH US</h3>
+<ul>
+<li><a href="https://github.com/ManishAgrawaal">Github</a></li>
+<li><a href="https://www.instagram.com/manishkumaragrahari261?igsh=NzB6amgyYTMxZmVr&utm_source=qr">Instagram</a></li>
+<li><a href="https://www.linkedin.com/in/semanish/">Linkedin</a></li>
+</ul>
+</div>
+
+</div>
+</footer>
+
+<script>
+function scrollToSection()
+{
+document.getElementById("projects").scrollIntoView({
+behavior:"smooth"
+});
+}
+</script>
+
+</body>
+</html>
